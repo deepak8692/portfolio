@@ -708,8 +708,6 @@ a.plyr__control:before {
   height: var(--plyr-range-track-height, 5px);
   -moz-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
-  -moz-user-select: none;
-  user-select: none;
 }
 
 .plyr--full-ui input[type='range']::-moz-range-thumb {
@@ -758,8 +756,8 @@ a.plyr__control:before {
   height: var(--plyr-range-track-height, 5px);
   -ms-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
-  -ms-user-select: none;
-  user-select: none;
+ 
+
 }
 
 .plyr--full-ui input[type='range']::-ms-fill-lower {
@@ -774,8 +772,8 @@ a.plyr__control:before {
   height: var(--plyr-range-track-height, 5px);
   -ms-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
-  -ms-user-select: none;
-  user-select: none;
+ 
+
 }
 
 .plyr--full-ui input[type='range']::-ms-thumb {
@@ -1034,7 +1032,6 @@ a.plyr__control:before {
 }
 
 .plyr__progress__buffer {
-  -webkit-appearance: none;
   background: 0 0;
   border: 0;
   border-radius: 100px;
@@ -1253,11 +1250,6 @@ a.plyr__control:before {
   overflow: hidden;
   position: relative;
   width: 100%;
-}
-
-.plyr__video-embed,
-.plyr__video-wrapper--fixed-ratio {
-  aspect-ratio: 16/9;
 }
 
 @supports not (aspect-ratio: 16/9) {
