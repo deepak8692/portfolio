@@ -22,16 +22,17 @@ body {
 
 .loading-bar-logo{
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   color: #fff;
-  background: url("/assets/img/WhiteAG.png") no-repeat fixed center;
-  background-size:40vh;
+  background: url("/assets/img/AGWHITELOGO.png") no-repeat fixed center;
+  background-size:8vh;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 49, 49, 0.5);
-  border-right: 1px solid rgba(0, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(57, 255, 20, 0.5);
-  border-left: 1px solid rgba(255, 255, 113, 0.5);
+ border-top: 1px solid rgba(252, 238, 40,1);
+ border-left: 1px solid rgba(252, 238, 40,1);
+  border-right: 6px solid rgba(252, 238, 40,1);
+  border-bottom: 5px solid rgba(252, 238, 40,1);
+  border-radius: 100%;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -40,140 +41,32 @@ body {
   padding: 1em;
 }
 
-
-
-.loading-bar-logo span {
+.loading-bar-logo span{
   position: absolute;
-  border-radius: 100vmax;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  animation: loading 5s linear infinite;
 }
 
-.spanTop {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 15px;
-  background: linear-gradient(
-    90deg,
-    transparent 50%,
-    rgba(255, 49, 49, 0.5),
-    rgb(255, 49, 49)
-  );
-}
-
-.spanBottom {
-  right: 0;
-  bottom: 0;
-  height: 15px;
-  background: linear-gradient(
-    90deg,
-    rgb(57, 255, 20),
-    rgba(57, 255, 20, 0.5),
-    transparent 50%
-  );
-}
-
-.spanRight {
-  top: 0;
-  right: 0;
-  width: 15px;
-  height: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 30%,
-    rgba(0, 255, 255, 0.5),
-    rgb(0, 255, 255)
-  );
-}
-
-.spanLeft {
-  left: 0;
-  bottom: 0;
-  width: 15px;
-  height: 0;
-  background: linear-gradient(
-    180deg,
-    rgb(255, 255, 113),
-    rgba(255, 255, 113, 0.5),
-    transparent 70%
-  );
-}
-
-.spanTop {
-  animation: animateTop 3s ease-in-out infinite;
-}
-
-.spanBottom {
-  animation: animateBottom 3s ease-in-out infinite;
-}
-
-.spanRight {
-  animation: animateRight 3s linear infinite;
-}
-
-.spanLeft {
-  animation: animateLeft 3s ease-in-out infinite;
-}
-
-@keyframes animateTop {
-  25% {
-    width: 100%;
-    opacity: 1;
+@keyframes loading{
+  0%{
+    border-top: 5px solid rgb(192, 224, 13);
+    transform: rotate(0deg);
+  }
+  25%{
+    border-top: 8px solid rgb(39, 241, 12);
+  }
+  50%{
+    border-top: 11px solid rgb(8, 165, 152);
+  }
+  75%{
+    border-top: 10px solid rgb(103, 21, 235);
   }
 
-  30%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes animateBottom {
-  0%,
-  50% {
-    opacity: 0;
-    width: 0;
-  }
-
-  75% {
-    opacity: 1;
-    width: 100%;
-  }
-
-  76%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes animateRight {
-  0%,
-  25% {
-    opacity: 0;
-    height: 0;
-  }
-
-  50% {
-    opacity: 1;
-    height: 100%;
-  }
-
-  55%,
-  100% {
-    height: 100%;
-    opacity: 0;
-  }
-}
-
-@keyframes animateLeft {
-  0%,
-  75% {
-    opacity: 0;
-    bottom: 0;
-    height: 0;
-  }
-
-  100% {
-    opacity: 1;
-    height: 100%;
+  100%{
+    border-top: 7px solid rgb(183, 41, 226);
+    transform: rotate(360deg);
   }
 }
 
