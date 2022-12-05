@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Artwell Graphics - Home</title>
+  <title>Graphics Designer</title>
   <meta name="robots" content="max-image-preview:large">
   <meta name="msapplication-TileImage" content="https://artwellgraphics.com/assets/img/WhiteAG.png">
-  <!-- <meta name="description" content="Artwell Graphics need customer, Customers need Design , You speak and Get Design">
-  <meta
-    content="graphic design,graphic, design,artist,advertisements,banner,logo,business card,animation,poster,mockup,Frames"
-    name="keywords"> -->
+  <meta name="description" content="Graphics designing service">
+
+  <meta content="graphic design,graphic, design,artist,advertisements,banner,logo,business card,animation,poster,mockup,Frames "
+    name="keywords">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
@@ -33,13 +33,21 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="assets/css/loaderStyle.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
 
 </head>
 
-<body>
-
+<body onload="preloaderFunc()">
+  <div id="loadingBar" class="loadingBar">
+    <div class="loading-bar-logo">
+    <span class="spanTop "></span>
+    <span class="spanRight "></span>
+    <span class="spanBottom "></span>
+    <span class="spanLeft "></span>
+  </div>
+  </div>
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -1005,6 +1013,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/preloader.js"></script>
+
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->

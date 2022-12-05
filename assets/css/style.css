@@ -1,9 +1,4 @@
-/**
-* Template Name: iPortfolio - v3.9.1
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -12,6 +7,178 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
 }
+
+/* ------------preloadeer starts here-----------------------*/
+.loadingBar{
+        position:fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #111111;
+        z-index: 99999;
+}
+
+.loading-bar-logo{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  background: url("/assets/img/WhiteAG.png") no-repeat fixed center;
+  background-size:40vh;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 49, 49, 0.5);
+  border-right: 1px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+  border-left: 1px solid rgba(255, 255, 113, 0.5);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+
+
+.loading-bar-logo span {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.spanTop {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 15px;
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(255, 49, 49, 0.5),
+    rgb(255, 49, 49)
+  );
+}
+
+.spanBottom {
+  right: 0;
+  bottom: 0;
+  height: 15px;
+  background: linear-gradient(
+    90deg,
+    rgb(57, 255, 20),
+    rgba(57, 255, 20, 0.5),
+    transparent 50%
+  );
+}
+
+.spanRight {
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.5),
+    rgb(0, 255, 255)
+  );
+}
+
+.spanLeft {
+  left: 0;
+  bottom: 0;
+  width: 15px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 113),
+    rgba(255, 255, 113, 0.5),
+    transparent 70%
+  );
+}
+
+.spanTop {
+  animation: animateTop 3s ease-in-out infinite;
+}
+
+.spanBottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+.spanRight {
+  animation: animateRight 3s linear infinite;
+}
+
+.spanLeft {
+  animation: animateLeft 3s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+/* ------------preloadeer ends here-----------------------*/
+
 
 a {
   color: #149ddd;
