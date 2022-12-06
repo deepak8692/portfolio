@@ -26,12 +26,12 @@ body {
   height: 150px;
   color: #fff;
   background: url("/assets/img/AGWHITELOGO.png") no-repeat fixed center;
-  background-size:8vh;
+  background-size:7vh;
   overflow: hidden;
- border-top: 1px solid rgba(252, 238, 40,1);
+ /* border-top: 1px solid rgba(252, 238, 40,1);
  border-left: 1px solid rgba(252, 238, 40,1);
   border-right: 6px solid rgba(252, 238, 40,1);
-  border-bottom: 5px solid rgba(252, 238, 40,1);
+  border-bottom: 5px solid rgba(252, 238, 40,1); */
   border-radius: 100%;
   font-family: sans-serif;
   display: flex;
